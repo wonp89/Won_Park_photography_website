@@ -1,0 +1,37 @@
+body {
+    background-color: black;
+}
+
+#mainHeading {
+  color: white;
+  text-align: center;
+}
+
+.layer {
+    padding: 20px;
+    color: white;
+}
+#base-layer {
+    overflow: hidden;
+}
+
+#layer-one {
+    background: red;
+}
+#layer-two {
+    background: green;
+}
+.slider {
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    padding-top: 200px;
+}
+.slider img {
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
