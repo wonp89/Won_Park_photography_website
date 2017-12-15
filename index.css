@@ -2,6 +2,8 @@ body {
     background-color: black;
     margin: 0;
     font-family: Arial;
+    max-width: 1200px;
+    /*overflow: hidden;*/
 }
 
 #mainHeading {
@@ -9,45 +11,43 @@ body {
   text-align: center;
 }
 
-.layer {
-    padding: 20px;
-    color: white;
-}
-#base-layer {
+/*#base-layer {
     overflow: hidden;
-}
+}*/
 
 #layer-one {
     background: red;
-    padding-top:200px;
-}
-.slider {
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
-}
-
-.slider img {
-    width: 70%;
+    width:130%;
+    position: absolute;
+    top: 40px;
+    bottom: 40px;
+    float:left;
 }
 
+#layer-two {
+    background: green;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width:90%;
+    float:left;
+}
+
+img {
+    width: 100%;
+    margin-top: 12px;
+}
+
+.photoRow {
+    display:flex;
+    padding-bottom: 50px;
+}
 
 /**/
 .photoColumn {
-    float: left;
-    width: 20%;
-    padding: 10px;
-}
-
-/* Clear floats after the columns */
-.photoRow:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.photoColumn img {
-    margin-top: 12px;
+    width: 30%;
+    flex-wrap: wrap;
+    margin-right:20px
 }
 
 @media (max-width: 800px) {
