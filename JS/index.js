@@ -4,7 +4,6 @@ $(document).ready(function () {
         parallax(e, document.getElementById('layer-two'), 2);
     });
 });
-
 function parallax(e, target, layer) {
     var layer_coeff = 10 / layer;
     var x = ($(window).width() - target.offsetWidth) / 2 - (e.pageX - ($(window).width() / 2)) / layer_coeff;
@@ -16,21 +15,18 @@ function parallax(e, target, layer) {
   var modal = document.getElementById('myModal');
   var img = document.getElementsByTagName('img');
   var modalImg = document.getElementById("img01");
-  var captionText = document.getElementById("caption");
   for (i = 0; i < img.length; i++) {
     img[i].onclick = function(){
         modal.style.display = "block";
         modalImg.src = this.src;
-        captionText.innerHTML = this.alt;
     }
   }
-// Get the <span> element that closes the modal
+// closing Modal
 var span = document.getElementsByClassName("close")[0];
-// When the user clicks on <span> (x), close the modal
+// click to close
 span.onclick = function() {
     modal.style.display = "none";
 }
-
 
 //------ button for go to top ----------//
 function topFunction() {
