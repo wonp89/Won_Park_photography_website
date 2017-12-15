@@ -1,5 +1,7 @@
 body {
     background-color: black;
+    margin: 0;
+    font-family: Arial;
 }
 
 #mainHeading {
@@ -17,21 +19,45 @@ body {
 
 #layer-one {
     background: red;
-}
-#layer-two {
-    background: green;
+    padding-top:200px;
 }
 .slider {
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
-    padding-top: 200px;
 }
+
 .slider img {
-    width: 80%;
-    padding-left: 10%;
-    padding-right: 10%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
+    width: 70%;
+}
+
+
+/**/
+.photoColumn {
+    float: left;
+    width: 20%;
+    padding: 10px;
+}
+
+/* Clear floats after the columns */
+.photoRow:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.photoColumn img {
+    margin-top: 12px;
+}
+
+@media (max-width: 800px) {
+    .photoColumn {
+        width: 50%;
+    }
+}
+
+@media (max-width: 400px) {
+    .photoColumn {
+        width: 100%;
+    }
 }
