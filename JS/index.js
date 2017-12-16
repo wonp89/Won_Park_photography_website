@@ -3,12 +3,15 @@ $(document).ready(function () {
         parallax(e, this, 1);
         parallax(e, document.getElementById('layer-two'), 2);
     });
+    if ($('#img01').height() > 700) {
+    	$('#img01').width(467)
+    }
 });
 function parallax(e, target, layer) {
     var layer_coeff = 10 / layer;
     var x = ($(window).width() - target.offsetWidth) / 2 - (e.pageX - ($(window).width() / 2)) / layer_coeff;
     var y = ($(window).height() - target.offsetHeight) / 2 - (e.pageY - ($(window).height() / 2)) / layer_coeff;
-    $(target).offset({ top: y ,left : x });
+    $(target).offset({ top: y ,left : x }); //transfer to jquery with values when mouse cursor moves
 };
 
 //------------------ modal for image viewer ----------------//
@@ -19,6 +22,11 @@ function parallax(e, target, layer) {
     img[i].onclick = function(){
         modal.style.display = "block";
         modalImg.src = this.src;
+        if (modalImg.height >= 700 || modalImg.height >= 650) {
+          modalImg.style.width = "467px";
+        } else {
+          modalImg.style.width = "700px";
+        }
     }
   }
 // closing Modal
