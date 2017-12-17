@@ -24,20 +24,12 @@ body {
   margin-top:20px;
 }
 
-#layer-one {
+#layer {
     background: black;
-    width:130%;
+    width:115%;
     position: absolute;
     top: 160px;
     bottom: 70px;
-}
-
-#layer-two {
-    background: black;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width:90%;
 }
 
 img {
@@ -45,22 +37,23 @@ img {
     border:solid 3px black;
     cursor: pointer;
     transition: 0.4s;
+    filter: brightness(0%);
+}
+
+.imgBrigtness {
+    filter: brightness(100%);
 }
 
 img:hover {
   border:solid 3px red;
-  filter: brightness(118%);
-}
-
-.nohover:hover {
-  border: none;
   filter: brightness(100%);
 }
 
 .photoRow {
+    margin-left: 3px;
+    margin-right: 5px;
     display:flex;
     padding-bottom: 50px;
-    margin-left:20px;
 }
 
 /**/
@@ -73,7 +66,6 @@ img:hover {
   margin-bottom: 50px;
   text-align: center;
 }
-
 
 /*--------------- MODAL ----------------*/
 .modal {
